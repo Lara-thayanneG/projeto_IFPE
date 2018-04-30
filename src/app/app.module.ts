@@ -6,10 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth'
+
 import { firebaseConfig } from '../environment';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+
 import { AuthenticationProvider } from '../providers/authentication/authentication';
 
 @NgModule({

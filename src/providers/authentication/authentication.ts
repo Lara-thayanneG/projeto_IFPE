@@ -1,18 +1,15 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from 'angularfire2/auth';
-/*
-  Generated class for the AuthenticationProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
+import { AngularFireAuth } from 'angularfire2/auth';
+
 @Injectable()
 export class AuthenticationProvider {
 
-  constructor(public  auth:  AngularFireAuth) {
+  constructor(public auth: AngularFireAuth) {
   }
-login(email,senha){
-  this.auth.auth.signInWithEmailAndPassword(email,senha);
-  
-}
+
+  login(email, senha) {
+    this.auth.auth.signInWithEmailAndPassword(email, senha);
+  }
+
 }
