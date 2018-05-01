@@ -11,14 +11,14 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { firebaseConfig } from '../environment';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { LandingPage } from '../pages/landing/landing';
 
 import { UserProvider } from '../providers/user/user';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    LandingPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,7 @@ import { UserProvider } from '../providers/user/user';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    LandingPage
   ],
   providers: [
     StatusBar,
