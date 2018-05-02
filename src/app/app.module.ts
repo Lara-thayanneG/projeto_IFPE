@@ -12,13 +12,15 @@ import { firebaseConfig } from '../environment';
 
 import { MyApp } from './app.component';
 import { LandingPage } from '../pages/landing/landing';
+import { CreateProfilePage } from '../pages/create-profile/create-profile';
 
 import { UserProvider } from '../providers/user/user';
 
 @NgModule({
   declarations: [
     MyApp,
-    LandingPage
+    LandingPage,
+    CreateProfilePage
   ],
   imports: [
     BrowserModule,
