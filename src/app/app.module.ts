@@ -5,40 +5,30 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { firebaseConfig } from '../environment';
 
 import { MyApp } from './app.component';
-import { LandingPage } from '../pages/landing/landing';
-import { CreateProfilePage } from '../pages/create-profile/create-profile';
-
-import { UserProvider } from '../providers/user/user';
 
 @NgModule({
   declarations: [
-    MyApp,
-    LandingPage,
-    CreateProfilePage
+    MyApp
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    LandingPage
+    MyApp
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    UserProvider
+    AngularFireAuth
   ]
 })
 export class AppModule { }

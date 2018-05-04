@@ -1,0 +1,18 @@
+<div class="wrapper" padding>
+  <img src="../../assets/imgs/large-logo.png">
+  <h6 ion-text text-center color="light">O par perfeito para seu melhor amigo</h6>
+  <div class="separator"></div>
+  <div class="card" padding>
+    <ion-item no-padding>
+      <ion-label color="dark">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item no-padding>
+      <ion-label color="dark">Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <button ion-button full (click)="login(email, password)">Entrar</button>
+  </div>
+  <div class="separator"></div>
+  <button ion-button full color="danger" (click)="register()">Criar conta</button>
+</div>
