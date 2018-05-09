@@ -20,12 +20,9 @@ export class RegisterPage {
 
   async register(name: string, email: string, password: string) {
     try {
-      const register = await this.fireAuth.auth.createUserWithEmailAndPassword(email, password);
-      if (register) {
-        console.log(register);
-        await this.fireAuth.auth.currentUser.updateProfile({ displayName: name, photoURL: '' });
-        this.navCtrl.setRoot('HomePage');
-      }
+      await this.fireAuth.auth.createUserWithEmailAndPassword(email, password);
+      await this.fireAuth.auth.currentUser.updateProfile({ displayName: name, photoURL: '' });
+      this.navCtrl.setRoot('CreateProfilePage');
     } catch (error) {
       console.log(error);
     }
